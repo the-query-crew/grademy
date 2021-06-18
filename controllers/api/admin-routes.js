@@ -1,6 +1,10 @@
+// Routes for admin
 const router = require('express').Router();
-const apiRoutes = require('./api');
+const Admin = require("../../models/Admin");
 
-router.use('/api', apiRoutes);
+
+
+
+
 
 module.exports = router;

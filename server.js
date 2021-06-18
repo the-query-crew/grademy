@@ -9,6 +9,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./controllers');
 const sequelize = require('./config/connection.js');
 const helpers = require('./utils/helpers');
+const models = require('./models');
 
 // Set up express app
 const app = express();
@@ -42,7 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Serves static files and uses routes
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(routes);
+app.use(routes); 
 
 // Syncs sequelize
 sequelize.sync({ force: false }).then(() => {
