@@ -7,7 +7,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Import routes/helpers/connection
 const routes = require('./controllers');
-const sequelize = require('./config/connection');
+const sequelize = require('./config/connection.js');
 const helpers = require('./utils/helpers');
 
 // Set up express app
@@ -29,6 +29,7 @@ const sess = {
 
 app.use(session(sess));
 
+// Initialize handlebars helpers
 const hbs = exphbs.create({ helpers });
 
 // Sets up handlebars
