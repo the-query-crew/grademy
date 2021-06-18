@@ -1,0 +1,1 @@
+/* JS file handles client side for signing users up  */
