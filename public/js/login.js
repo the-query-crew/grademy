@@ -1,0 +1,1 @@
+/* JS file handles client side for logging in admins and students  */
