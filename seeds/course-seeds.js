@@ -4,7 +4,12 @@ const courseData = [
   {
     course_name: 'Chemistry',
     max_capacity: 100,
-    teacher_id: 1,
+    admin_id: 1,
+  },
+  {
+    course_name: 'Biology',
+    max_capacity: 100,
+    admin_id: 2,
   },
 ];
 
