@@ -1,4 +1,3 @@
-// Routes for admin
 const router = require('express').Router();
 const Admin = require("../../models/Admin");
 
@@ -18,6 +17,7 @@ router.post('/', async (req, res) => {
             req.session.loggedIn = true;
             req.session.admin = true;
             req.session.student = false;
+            req.session.userID = d.id; // This ID variable will be used to create a course with this student ID
             res.status(200).json({message: "Admin successfully created!"});
         })
     } catch (error) {
@@ -42,6 +42,7 @@ router.post('/login', async (req, res) => {
                 req.session.loggedIn = true;
                 req.session.admin = true;
                 req.session.student = false;
+                req.session.userID = d.id;
                 res.status(200).json({message: "Succesfully logged in!"});
             })
         }

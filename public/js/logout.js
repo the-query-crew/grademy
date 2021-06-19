@@ -1,1 +1,1 @@
-/* JS file handles client side for signing users up  */
+/* JS file handles client side for logging users out  */
