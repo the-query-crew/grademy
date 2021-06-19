@@ -20,7 +20,7 @@ Course.init(
         allowNull: false,
         defaultValue: 0,
     },
-    admin_id: {
+    admin_instructor_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
