@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
             req.session.loggedIn = true;
             req.session.admin = false;
             req.session.student = true;
-            req.session.userID = d.id;
+            req.session.userID = d.id; // This ID variable will be used to create a course with this student ID
             res.status(200).json(d); 
         })
     } catch (error) {
@@ -42,7 +42,7 @@ router.post('/login', async (req, res) => {
                 req.session.loggedIn = true;
                 req.session.admin = false;
                 req.session.student = true;
-                req.session.userID = d.id;
+                req.session.userID = d.id; 
                 res.status(200).json(d);
             })
         }
