@@ -20,9 +20,9 @@
                 <li><a href="#">Dashboard</a></li>
                 {{#if loggedIn}} <!-- Different routes for logging out depending on admin or student -->
                 {{#if admin}}
-                <li><a id="logOutAdmin1">Log Out</a></li>
+                <li><a id="logOutAdmin1">Log Out Admin</a></li>
                 {{else}}
-                <li><a id="logOutStudent1">Log Out</a></li>
+                <li><a id="logOutStudent1">Log Out Student</a></li>
                 {{/if}}
                 {{else}}
                 <li><a href="/">Log In</a></li>
