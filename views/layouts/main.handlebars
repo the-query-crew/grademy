@@ -20,6 +20,7 @@
               <ul class="left hide-on-med-and-down">
                 <li><a href="#">Dashboard</a></li>
                 {{#if loggedIn}} <!-- Different routes for logging out depending on admin or student -->
+                <li><a href="/chat">Chat</a></li>
                 {{#if admin}}
                 <li><a id="logOutAdmin1">Log Out Admin</a></li>
                 {{else}}
@@ -35,6 +36,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#">Dashboard</a></li>
             {{#if loggedIn}}
+            <li><a href="/chat">Chat</a></li>
             {{#if admin}}
             <li><a id="logOutAdmin2">Log Out</a></li>
             {{else}}
