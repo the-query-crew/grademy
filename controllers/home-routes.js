@@ -1,5 +1,18 @@
 const router = require('express').Router();
 
+// Home routes
+
+// Log in page
+
+router.get('/', (req, res) => {
+    res.render('login', {
+        loggedIn: req.session.loggedIn,
+        admin: req.session.admin,
+        student: req.session.student
+    });
+})
+
+
 router.get('/dashboard-admin', (req, res) => {
 
     res.render('dashboard-admin', {
