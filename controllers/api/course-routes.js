@@ -30,5 +30,18 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+      const courseDataDB = await Course.findByPk(req.params.id);
+  
+      const course = courseDataDB.get({ plain: true });
+  
+      res.render('view-course', { course });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
 
 module.exports = router;
