@@ -154,3 +154,105 @@ body {
     justify-content: start;
   }
 }
+
+/*** Chat styles ***/
+section {
+    height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #f5f5f5;
+}
+
+.current-user-title {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(78, 77, 77, 0.16);
+}
+
+.current-user-header {
+    padding: 10px;
+    background: #f6f6f6;
+}
+
+.current-user-list {
+    padding: 20px;
+}
+
+.message-container {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(107, 100, 100, 0.16);
+}
+
+.input-container {
+    padding: 15px;
+    background: #f6f6f6;
+    height: 90px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container textarea:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: white;
+}
+
+.messages {
+    overflow: overlay;
+    padding: 10px;
+    height: 280px;
+}
+
+.one-message {
+    width: 80%;
+}
+
+.one-message p {
+    background:rgba(21, 110, 62, 0.753) none repeat scroll 0 0;
+    border-radius: 0px;
+    color: black;
+    font-size: 15px;
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    min-width: 100%;
+}
+
+.date {
+    color: #3d2a2a;
+    display: block;
+    font-size: 13px;
+    margin: 8px 0 0;
+}
+
+.sendMsgBtn {
+    border-radius: 0px;
+    font-weight: 300;
+    background:  rgba(21, 110, 62, 0.753);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+    height: 2.5rem;
+    display: block;
+    padding: 2%;
+}
+
+.sendMsgBtn:hover {
+    border-color: rgb(4, 70, 14);
+    color: rgb(4, 70, 14);
+    background-color: #fff;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .current-user-title {
+      display: none;
+      position: relative;
+      top: -100%;
+    }
+}

@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
     });
 })
 
-
 router.get('/dashboard-admin', (req, res) => {
 
     res.render('dashboard-admin', {
@@ -39,5 +38,15 @@ router.get('/create', (req, res) => {
         student: req.session.student
     });
 })
+
+// Chat page
+router.get('/chat', (req, res) => {
+    res.render('chat',  {
+        loggedIn: req.session.loggedIn,
+        admin: req.session.admin,
+        student: req.session.student,
+        userName: req.session.userName
+    })
+});
 
 module.exports = router;
