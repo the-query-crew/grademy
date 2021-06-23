@@ -18,7 +18,7 @@ const logInStudent = async (e) => {
             }
         })
         if (response.ok) {
-            document.location.replace('/'); // Replace to dash once dash route is completed
+            document.location.replace('/dashboard-student'); // Replace to dash once dash route is completed
         } else {
             alert("Could not log you in. Please try again.")
         }
@@ -43,7 +43,7 @@ const logInAdmin = async (e) => {
             }
         })
         if (response.ok) {
-            document.location.replace('/'); // Replace to dash once dash route is completed
+            document.location.replace('/dashboard-admin'); // Replace to dash once dash route is completed
         } else {
             alert("Could not log you in. Please try again.")
         }

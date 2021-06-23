@@ -15,14 +15,17 @@ $("#signUpBtn").on('click', async (e) => {
     let choice = $("#choice option:selected").val();
     let route; 
     let role;
+    let pageRedirect;
 
     if (choice === "1") { // If user is student, this route will be used in the fetch request
         role = 'student'
         route = '/api/student';
+        pageRedirect = '/dashboard-student';
 
     } else if (choice === "2") { // If user is student, this route will be used in the fetch request
         role = 'admin'
         route = '/api/admin';
+        pageRedirect = '/dashboard-admin';
     }
 
     if (email === "" || userName === "" || password === "" || choice === "") {
@@ -41,7 +44,7 @@ $("#signUpBtn").on('click', async (e) => {
           }
           });
           if (response.ok) {
-            document.location.replace('/'); // Replace to dash once dash route is completed
+            document.location.replace(pageRedirect); // Replace to dash once dash route is completed
           } else {
             alert("Could not create your account. Please try again.");
         } 

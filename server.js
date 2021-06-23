@@ -15,6 +15,10 @@ const models = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Set up socket.io 
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 // Set up sessions
 const sess = {
   secret: 'Super secret secret',
@@ -45,7 +49,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes); 
 
+let users = 0; // Keeps track of number of users
+io.on('connection', (socket) => {
+  console.log('A user joined the room.');
+  users++;
+  console.log(users);
+
+  socket.on('disconnect', () => {
+    console.log('A user left the room.');
+    users--;
+    console.log(users);
+  })
+
+socket.on('msg', (data) => {
+  io.sockets.emit('newmsg', data); // Sends to the client side an event called 'newMsgHandler' with the user text
+})
+});
+
 // Syncs sequelize
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  http.listen(PORT, () => console.log('Now listening'));
 });
