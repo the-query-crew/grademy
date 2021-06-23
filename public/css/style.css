@@ -256,3 +256,33 @@ section {
       top: -100%;
     }
 }
+
+/**** Course partials ***/
+.my-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1%;
+    background: #fff;
+    line-height: 1.4;
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 0;
+    text-align: center;
+
+}
+
+.my-card .post {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.p-title {
+    color: #2E8B57;
+    line-height: 1;
+    margin: 0;
+    font-size: 15px;
+}
