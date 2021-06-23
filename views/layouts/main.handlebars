@@ -19,19 +19,19 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
                 {{#if loggedIn}} <!-- Different routes for logging out depending on admin or student -->
-                <li><a href="/chat">Chat</a></li>
+                <li><a class="black-text"href="/chat">Chat</a></li>
                 {{#if admin}}
-                <li><a href="/dashboard-admin">Dashboard</a></li> <!-- Dashboard route for admin -->
-                <li><a id="logOutAdmin1">Log Out Admin</a></li>
+                <li><a class="black-text" href="/dashboard-admin">Dashboard</a></li> <!-- Dashboard route for admin -->
+                <li><a class="black-text" id="logOutAdmin1">Log Out Admin</a></li>
                 {{else}}
-                <li><a href="/dashboard-student">Dashboard</a></li> <!-- Dashboard route for student -->
-                <li><a id="logOutStudent1">Log Out Student</a></li>
+                <li><a class="black-text" href="/dashboard-student">Dashboard</a></li> <!-- Dashboard route for student -->
+                <li><a class="black-text" id="logOutStudent1">Log Out Student</a></li>
                 {{/if}}
                 {{else}}
-                <li><a href="/">Log In</a></li>
+                <li><a class="black-text" href="/">Log In</a></li>
                 {{/if}}
               </ul>
-              <a href="/" class="right app-title">Grademy</a>
+              <a href="/" class="right app-title black-text">Grademy</a>
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
