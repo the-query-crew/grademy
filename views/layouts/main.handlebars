@@ -18,12 +18,13 @@
             <div class="nav-wrapper grey lighten-1">
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
-                <li><a href="#">Dashboard</a></li>
                 {{#if loggedIn}} <!-- Different routes for logging out depending on admin or student -->
                 <li><a href="/chat">Chat</a></li>
                 {{#if admin}}
+                <li><a href="#">Dashboard</a></li> <!-- Dashboard route for admin -->
                 <li><a id="logOutAdmin1">Log Out Admin</a></li>
                 {{else}}
+                <li><a href="#">Dashboard</a></li> <!-- Dashboard route for student -->
                 <li><a id="logOutStudent1">Log Out Student</a></li>
                 {{/if}}
                 {{else}}
@@ -38,8 +39,10 @@
             {{#if loggedIn}}
             <li><a href="/chat">Chat</a></li>
             {{#if admin}}
+            <li><a href="#">Dashboard</a></li> <!-- Dashboard route for admin -->
             <li><a id="logOutAdmin2">Log Out</a></li>
             {{else}}
+            <li><a href="#">Dashboard</a></li> <!-- Dashboard route for student -->
             <li><a id="logOutStudent2">Log Out</a></li>
             {{/if}}
             {{else}}
