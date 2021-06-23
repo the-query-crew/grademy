@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel= "stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -17,12 +18,14 @@
             <div class="nav-wrapper grey lighten-1">
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
-                <li><a href="#">Dashboard</a></li>
                 {{#if loggedIn}} <!-- Different routes for logging out depending on admin or student -->
+                <li><a href="/chat">Chat</a></li>
                 {{#if admin}}
-                <li><a id="logOutAdmin1">Log Out</a></li>
+                <li><a href="#">Dashboard</a></li> <!-- Dashboard route for admin -->
+                <li><a id="logOutAdmin1">Log Out Admin</a></li>
                 {{else}}
-                <li><a id="logOutStudent1">Log Out</a></li>
+                <li><a href="#">Dashboard</a></li> <!-- Dashboard route for student -->
+                <li><a id="logOutStudent1">Log Out Student</a></li>
                 {{/if}}
                 {{else}}
                 <li><a href="/">Log In</a></li>
@@ -34,9 +37,12 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#">Dashboard</a></li>
             {{#if loggedIn}}
+            <li><a href="/chat">Chat</a></li>
             {{#if admin}}
+            <li><a href="#">Dashboard</a></li> <!-- Dashboard route for admin -->
             <li><a id="logOutAdmin2">Log Out</a></li>
             {{else}}
+            <li><a href="#">Dashboard</a></li> <!-- Dashboard route for student -->
             <li><a id="logOutStudent2">Log Out</a></li>
             {{/if}}
             {{else}}
