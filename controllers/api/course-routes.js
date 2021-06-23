@@ -30,5 +30,18 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.post('/signup', async (req, res) => {
+    try {
+        const signupData = await CourseJunction.create({
+            student_id: req.session.userID,
+            course_id: req.body.courseId,
+        });
+        res.status(200).json(signupData.get({ plain: true }));
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 
 module.exports = router;
