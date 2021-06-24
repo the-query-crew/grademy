@@ -17,7 +17,7 @@ body {
     font-weight: 200;
 }
 
-/**** Containers ****/
+/**** LOG IN/ LOG OUT STYLES ****/
 .main-container {
     flex-direction: row;
     display: flex;
@@ -55,7 +55,7 @@ body {
 
 /**** Text field styles ****/
 .input-field input:focus + label {
-    color: red !important;
+    color: darkgreen !important;
 }
   /* label underline focus color */
 .row .input-field input:focus {
@@ -70,7 +70,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80') no-repeat center center / cover;
+    background: url('/images/homepage-img.jpg') no-repeat center center / cover;
 }
 
 .right-img .main-text {
@@ -133,7 +133,6 @@ body {
     padding-top: 10%;
 }
 
-/* Media queries */
 @media (min-width: 1200px) { /* Extra large screens */
   .left-container {
     flex: 4;
@@ -155,7 +154,7 @@ body {
   }
 }
 
-/*** Chat styles ***/
+/**** CHAT STYLES ****/
 section {
     height: 100vh;
     padding-top: 50px;
@@ -255,4 +254,32 @@ section {
       position: relative;
       top: -100%;
     }
+}
+
+/**** COURSE PARTIAL STYLES ****/
+.my-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    line-height: 1.4;
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 0;
+    text-align: center;
+
+}
+
+.my-card .post {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.p-title {
+    color: #2E8B57;
+    line-height: 1;
+    margin: 0;
+    font-size: 15px;
 }
