@@ -14,16 +14,25 @@ CourseJunctions.init(
         student_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: 'Student',
+                key: 'id',
+            },
         },
         course_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: 'Course',
+                key: 'id',
+            },
         },
     },
     { 
         sequelize,
         timestamps: false,
         freezeTableName: true,
+        underscored: true,
         modelName: 'course_junction',
     }
 );
