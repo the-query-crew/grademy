@@ -30,6 +30,19 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.post('/signup', async (req, res) => {
+    try {
+        const signupData = await CourseJunction.create({
+            student_id: req.session.userID,
+            course_id: req.body.courseId,
+        });
+        res.status(200).json(signupData.get({ plain: true }));
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 router.get('/:id', async (req, res) => {
     try {
       const courseDataDB = await Course.findByPk(req.params.id);
