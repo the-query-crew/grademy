@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
         const d = await Course.create({
             course_name: req.body.courseName,
             max_capacity: req.body.maxCapacity,
-            teacher_id: req.session.userID,
+            admin_instructor_id: req.session.userID,
             //course_description: req.body.courseDescription,
         }) 
         res.status(200).json({message: "course created"});
@@ -43,5 +43,18 @@ router.post('/signup', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+      const courseDataDB = await Course.findByPk(req.params.id);
+  
+      const course = courseDataDB.get({ plain: true });
+  
+      res.render('view-course', { course });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
 
 module.exports = router;
