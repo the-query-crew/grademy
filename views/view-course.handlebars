@@ -5,6 +5,9 @@
             <p>{{ course.max_capacity }}</p>
             <p>{{ course.teacher_id }}</p>
             <p>{{ course.course_description }}</p>
-        </div>  
+        </div>
+        {{#if student}}
+        <button id="addCourse" class="btn waves-effect waves-light align-center green-btn", type="submit">Add Course</button>  
+        {{/if}}
     </div>
 </div>

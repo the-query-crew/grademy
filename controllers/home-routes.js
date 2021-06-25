@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const Student = require('../models/Student');
 const withAuth = require('../utils/auth')
 
 // Home routes
@@ -22,13 +23,21 @@ router.get('/dashboard-admin', withAuth, (req, res) => {
     });
 })
 
-router.get('/dashboard-student', withAuth, (req, res) => {
+router.get('/dashboard-student', withAuth, async (req, res) => {
 
-    res.render('dashboard-student', {
-        loggedIn: req.session.loggedIn,
-        admin: req.session.admin,
-        student: req.session.student
-    });
+    try {
+        const studentData = await Student.findByPk(req.session.userID, {include: {all: true}});
+        const student = studentData.get({ plain: true });
+        res.render('dashboard-student', {
+            studentData: student,
+            loggedIn: req.session.loggedIn,
+            admin: req.session.admin,
+            student: req.session.student
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
 })
 
 // Sign up page
