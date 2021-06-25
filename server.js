@@ -67,6 +67,6 @@ socket.on('msg', (data) => {
 });
 
 // Syncs sequelize
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   http.listen(PORT, () => console.log('Now listening'));
 });
