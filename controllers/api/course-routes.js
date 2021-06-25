@@ -49,7 +49,11 @@ router.get('/:id', async (req, res) => {
   
       const course = courseDataDB.get({ plain: true });
   
-      res.render('view-course', { course });
+      res.render('view-course', { 
+        course, 
+        loggedIn: req.session.loggedIn,
+        admin: req.session.admin,
+        student: req.session.student });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
