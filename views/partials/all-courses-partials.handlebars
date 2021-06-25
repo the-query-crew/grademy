@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col s10 m12">
+    <h3>All Courses</h3>
+    <hr>
+</div>
+</div>
+{{#each courses as | course |}}
+<div class="row">
+    <div class="col s12 l4 offset-l4">
+        <div class="my-card hoverable"> <!-- Partial for viewing each course -->
+            <div class="post">
+                <a href="/api/courses/{{id}}"><h1 class="p-title">{{course_name}}</h1></a> <!-- Route to view course -->
+            </div>  
+        </div>
+    </div>
+</div>
+{{/each}}
