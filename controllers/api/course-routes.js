@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
             course_name: req.body.courseName,
             max_capacity: req.body.maxCapacity,
             admin_instructor_id: req.session.userID,
-            //course_description: req.body.courseDescription,
+            course_description: req.body.courseDescription,
         }) 
         res.status(200).json({message: "course created"});
     } catch (error) {
