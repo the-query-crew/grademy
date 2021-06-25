@@ -340,3 +340,8 @@ section {
     margin: 0;
     font-size: 15px;
 }
+
+/**** CREATE COURSE STYLES ****/
+.single-container .row {
+    margin-top: 7%;
+}
