@@ -13,6 +13,12 @@ const studentData = [
     password: '$2b$10$OSvwajVC3XhZB7yTPheqq.V8mM0tzTXT.RSgiGw3gGJKZn6NA3EcS',
     role: 'student',
   },
+  {
+    userName: 'student123',
+    email: 'student@gmail.com',
+    password: '$2b$10$OSvwajVC3XhZB7yTPheqq.V8mM0tzTXT.RSgiGw3gGJKZn6NA3EcS',
+    role: 'student',
+  },
 ];
 
 const seedCategories = () => Student.bulkCreate(studentData);

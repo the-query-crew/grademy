@@ -22,7 +22,7 @@ $("#signUpBtn").on('click', async (e) => {
         route = '/api/student';
         pageRedirect = '/dashboard-student';
 
-    } else if (choice === "2") { // If user is student, this route will be used in the fetch request
+    } else if (choice === "2") { // If user is admin, this route will be used in the fetch request
         role = 'admin'
         route = '/api/admin';
         pageRedirect = '/dashboard-admin';

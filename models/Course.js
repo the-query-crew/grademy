@@ -15,6 +15,9 @@ Course.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    course_description: {
+        type: DataTypes.TEXT,
+    },
     max_capacity: {
         type: DataTypes.INTEGER,
         allowNull: false,

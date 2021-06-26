@@ -1,5 +1,6 @@
 {{#if loggedIn }}
-<div class="single-container">  <!-- Create courses, only available for admin accounts -->
+{{#if admin}}
+<div class="container">  <!-- Create courses, only available for admin accounts -->
         <div class="row">
             <div class="col l3 s12"></div>
             <div class="col l6 s12">
@@ -22,10 +23,10 @@
                             <div class="input-field col s12">
                                 <span class="prefix"></span>
                                 <textarea id="courseDescription" class="materialize-textarea body"></textarea>
-                                <label for="courseDescritpion">Course Descritpion</label>
+                                <label for="courseDescription">Course Description</label>
                             </div>
                             <div class="col s12 center-align">
-                                <button id="submitCourse"class="btn waves-effect waves-light align-center green-btn" type="submit">Submit</button>
+                                <button id="submitCourse"class="btn waves-effect waves-light align-center green darken-1" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -33,10 +34,6 @@
             </div>
         </div>
 </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/js/add-course.js"></script>
-    <script src="/js/global.js"></script>
-    
+{{/if}}    
 {{/if}}
