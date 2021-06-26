@@ -10,7 +10,7 @@
                         </div>
                         <div class="current-user-list">
                             <ul class="green-text">
-                                <li id ="user">You: {{userName}}</li> <!-- Current user will be listed here -->
+                                <li id ="user">You: {{userName}} {{#if admin}}| Admin {{else}}| Student {{/if}} </li> <!-- Current user will be listed here -->
                             </ul>
                             <hr class="hr-line">
                             <div id="new-users"></div> <!-- Users will be appended here -->
