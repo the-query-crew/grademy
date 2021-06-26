@@ -17,6 +17,10 @@ body {
     font-weight: 200;
 }
 
+.firstnav {
+    margin-top: 15%;
+}
+
 /**** LOG IN/ LOG OUT STYLES ****/
 .main-container {
     flex-direction: row;
@@ -33,6 +37,15 @@ body {
 
 .right-container {
     flex: 1;
+}
+
+.small-text {
+    font-size: 20px;
+    width: 100%;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /**** Left container  ****/

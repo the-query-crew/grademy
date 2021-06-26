@@ -7,7 +7,16 @@ const Course = require('../models/Course')
 
 // Log in page
 
+// If the user is already logged in, take them to their dash. If not, take them to the log in screen
 router.get('/', (req, res) => {
+    if (req.session.loggedIn) {
+        if (req.session.admin === true) {
+            res.redirect('/dashboard-admin');
+        } else if (req.session.student === true) {
+            res.redirect('/dashboard-student');
+        }
+        return;
+    }
     res.render('login', {
         loggedIn: req.session.loggedIn,
         admin: req.session.admin,
