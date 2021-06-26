@@ -1,5 +1,7 @@
 //start with '/dash'
 const router = require('express').Router();
+const Admin  = require('../models/Admin')
+const Course = require('../models/Course')
 
 router.get('/create', function(req, res) {
     res.render('create-course',  {
@@ -8,5 +10,6 @@ router.get('/create', function(req, res) {
         student: req.session.student
     })
 });
+  
 
 module.exports = router;
