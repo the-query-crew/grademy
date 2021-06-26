@@ -43,7 +43,7 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
       const courseDataDB = await Course.findByPk(req.params.id);
   
