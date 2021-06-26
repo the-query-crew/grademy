@@ -1,7 +1,7 @@
 const courseSignupHandler = async (e) => {
     e.preventDefault();
 
-    let courseId = e.target.getAttribute('courseId');
+    const courseId = window.location.toString().split('/')[window.location.toString().split('/').length - 1]; // Retrieves the post ID from the window
     console.log(courseId);
     const response = await fetch('/api/courses/signup', {
         method: 'POST',
@@ -18,4 +18,4 @@ const courseSignupHandler = async (e) => {
     }
 }
 
-$('button').click(courseSignupHandler);
+$('#addCourse').click(courseSignupHandler);
