@@ -60,18 +60,20 @@ router.get('/:id', withAuth, async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const dropCourse = await Course.destroy(
+      const dropCourse = await CourseJunction.destroy(
         {
           where: {
-            id: req.params.id,
+            course_id: req.params.id,
+            student_id: req.session.userID
           },
         }
       );
       res.status(200).json(dropCourse);
     } catch (err) {
       res.status(500).json(err);
+      console.log(err);
     }
   });
   

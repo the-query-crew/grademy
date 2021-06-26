@@ -5,9 +5,6 @@ const courseDropHandler = async (e) => {
     console.log(courseId);
     const response = await fetch(`/api/courses/${courseId}`, {
         method: 'DELETE',
-        headers: {
-            "Content-Type": "application/json"
-        }
     });
 
     if (response.ok) {
@@ -17,4 +14,4 @@ const courseDropHandler = async (e) => {
     }
 }
 
-$('#addCourse').click(courseSignupHandler);
+$('#dropCourse').click(courseDropHandler);
