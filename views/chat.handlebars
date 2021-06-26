@@ -1,7 +1,7 @@
    <section>
         <div class="container">
             <div class="row">
-                <div class="col m4">
+                <div class="col m4 pull-m2">
                     <div class="current-user-title">
                         <div class="current-user-header">
                             <ul class="green-text">
@@ -10,12 +10,14 @@
                         </div>
                         <div class="current-user-list">
                             <ul class="green-text">
-                                <li id ="user">You: {{userName}}</li>
+                                <li id ="user">You: {{userName}}</li> <!-- Current user will be listed here -->
                             </ul>
+                            <hr class="hr-line">
+                            <div id="new-users"></div> <!-- Users will be appended here -->
                         </div>
                     </div>
                 </div> 
-                <div class="col m8">
+                <div class="col m8 pull-m2">
                     <div class="message-container">
                         <div class="current-user-header">
                             <ul class="green-text">
