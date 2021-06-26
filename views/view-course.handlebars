@@ -1,13 +1,29 @@
-<div class="single-container"> <!-- Template for viewing one course-->
-    <div class="row"> 
-        <div class="post">
-            <h2 class="courseName">{{ course.course_name }}</h2>
-            <p>{{ course.max_capacity }}</p>
-            <p>{{ course.teacher_id }}</p>
-            <p>{{ course.course_description }}</p>
+<div class="container"> <!-- Template for viewing one course-->
+    <div class="row center-align"> 
+        <div class="col 16 s12">
+            <div class="card-content center-align">
+                <h2 class="courseName card-title" style="font-size: 275%; color: darkgreen; font-weight: bold; margin-top: 15%;">
+                    {{ course.course_name }}
+                </h2>
+                <h5 class="courseFormat left-align" style="font-size: 175%; color: darkgreen; margin: 5% 5%">
+                    Online and Instructor Led
+                </h5>
+                <p class="maxCapacity left-align" style="font-size: 150%; color: rgb(24, 24, 24); margin: 5% 5%;">
+                    Max Capacity: {{ course.max_capacity }}
+                </p>
+                <p class="teacherID left-align" style="font-size: 150%; color: rgb(24, 24, 24); margin: 5% 5%;">
+                    Instuctor ID: {{ course.admin_instructor_id }}
+                </p>
+                <p class="courseDescription left-align" style="font-size: 150%; color: rgb(5, 5, 5); margin: 5% 5%;"> 
+                    Course Description:
+                    <br>
+                    <br>
+                    {{ course.course_description }}
+                </p>
+            </div>
         </div>
         {{#if student}}
-        <button id="addCourse" class="btn waves-effect waves-light align-center green-btn", type="submit">Add Course</button>  
+        <button id="addCourse" class="btn-large center-align ", type="submit" style="font-weight: bold; background-color: darkgreen;">Add Course</button>  
         {{/if}}
     </div>
 </div>
