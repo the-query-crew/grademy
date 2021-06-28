@@ -58,7 +58,26 @@ router.get('/:id', withAuth, async (req, res) => {
       console.log(err);
       res.status(500).json(err);
     }
-  });
+});
+
+router.put('/edit/:id', withAuth, async (req, res) => {
+    try {
+        const courseUpdate = await Course.update(
+        {
+          course_name: req.body.courseName,
+          course_description: req.body.courseDescription,
+          max_capacity: req.body.maxCapacity,
+        }, {
+            where: {id: req.params.id}
+        }
+      );
+      console.log(courseUpdate);
+    console.log(req.body)
+      res.status(200).json({message: "course edited"});
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
   
 
 module.exports = router;

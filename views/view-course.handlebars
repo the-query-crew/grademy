@@ -25,6 +25,13 @@
         {{#if student}}
         <button id="addCourse" class="btn-large center-align ", type="submit" style="font-weight: bold; background-color: darkgreen;">Add Course</button>  
         {{/if}}
+
+        {{#if admin}}
+        <a href="/dash/edit/{{course.id}}"> 
+        <button id="editCourse" class="btn-large center-align ", type="submit" style="font-weight: bold; background-color: darkgreen;">Edit Course</button>
+        </a>
+        {{/if}}
+
     </div>
 </div>
 <script src="/js/courseSignup.js"></script>
