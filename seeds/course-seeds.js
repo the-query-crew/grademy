@@ -14,18 +14,6 @@ const courseData = [
     admin_instructor_id: 2,
   },
   {
-    course_name: 'Statistics',
-    course_description: 'Students are introduced to the fundamental concepts involved in using sample data to make inferences about populations. Included are the study of measures of central tendency and dispersion, finite probability, probability distributions, statistical inferences from large and small samples, linear regression, and correlation.',
-    max_capacity: 100,
-    admin_instructor_id: 2,
-  },
-  {
-    course_name: 'Nutrition',
-    course_description: 'This course is designed to provide students with an understanding of basic needs of daily nutrition, life cycle influences that affect nutrition and food choices, and the functions of proteins, energy, and the major vitamins and minerals.',
-    max_capacity: 100,
-    admin_instructor_id: 2,
-  },
-  {
     course_name: 'Physics',
     course_description: 'A course in elementary physics, covers the basic concepts, principles and history of physics. Course topics will include selected topics in mechanics, heat, light, sound, electricity and magnetism, and modern physics.',
     max_capacity: 100,
@@ -42,6 +30,18 @@ const courseData = [
     course_description: 'Course Description: Spanish 2 builds upon knowledge gained in Spanish 1. This course will also reinforce the skills learned in Spanish I: listening, speaking, reading and writing. Emphasis is on perfecting pronunciation, mastery of the basic grammatical structures, and increased communicative proficiency.',
     max_capacity: 100,
     admin_instructor_id: 5,
+  },
+  {
+    course_name: 'Statistics',
+    course_description: 'Students are introduced to the fundamental concepts involved in using sample data to make inferences about populations. Included are the study of measures of central tendency and dispersion, finite probability, probability distributions, statistical inferences from large and small samples, linear regression, and correlation.',
+    max_capacity: 100,
+    admin_instructor_id: 2,
+  },
+  {
+    course_name: 'Nutrition',
+    course_description: 'This course is designed to provide students with an understanding of basic needs of daily nutrition, life cycle influences that affect nutrition and food choices, and the functions of proteins, energy, and the major vitamins and minerals.',
+    max_capacity: 100,
+    admin_instructor_id: 2,
   },
 ];
 
