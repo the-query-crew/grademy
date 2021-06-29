@@ -5,10 +5,9 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Import routes/helpers/connection
+// Import routes/connection
 const routes = require('./controllers');
 const sequelize = require('./config/connection.js');
-const helpers = require('./utils/helpers');
 const models = require('./models');
 
 // Set up express app
@@ -33,6 +32,8 @@ const sess = {
 };
 
 app.use(session(sess));
+
+const hbs = exphbs.create({});
 
 // Sets up handlebars
 app.engine('handlebars', hbs.engine);
