@@ -1,9 +1,9 @@
 {{#if loggedIn }}
 {{#if admin}}
 <div class="container">  <!-- Create courses, only available for admin accounts -->
-        <div class="row" style="margin-top: 10%;">
-            <div class="col l3 s12"></div>
-            <div class="col l6 s12">
+        <div class="row">
+            <div class="col l3 s12" ></div>
+            <div class="col l6 s12" style="margin-top: 10%;">
                 <div class="card z-depth-3">
                     <div class="center log-sign-title">
                         <span >Create New Class</span>
@@ -12,21 +12,21 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <span class="prefix"></span>
-                                <textarea id="courseName" class="materialize-textarea body"></textarea>
+                                <textarea id="courseName" class="materialize-textarea body">{{ course.course_name }}</textarea>
                                 <label for="courseName">Course Name</label>
                             </div>
                             <div class="input-field col s12">
                                 <span class="prefix"></span>
-                                <textarea id="maxCapacity" class="materialize-textarea body"></textarea>
+                                <textarea id="maxCapacity" class="materialize-textarea body">{{ course.max_capacity }}</textarea>
                                 <label for="maxCapacity">Max Capacity</label>
                             </div>
                             <div class="input-field col s12">
                                 <span class="prefix"></span>
-                                <textarea id="courseDescription" class="materialize-textarea body"></textarea>
+                                <textarea id="courseDescription" class="materialize-textarea body">{{ course.course_description }}</textarea>
                                 <label for="courseDescription">Course Description</label>
                             </div>
                             <div class="col s12 center-align">
-                                <button id="submitCourse"class="btn waves-effect waves-light align-center green darken-1" type="submit">Submit</button>
+                                <button id="updateCourse"class="btn waves-effect waves-light align-center green darken-1" type="submit">Update</button>
                             </div>
                         </div>
                     </form>
@@ -34,6 +34,6 @@
             </div>
         </div>
 </div>
-    <script src="/js/add-course.js"></script>
+    <script src="/js/edit-course.js"></script>
 {{/if}}    
 {{/if}}

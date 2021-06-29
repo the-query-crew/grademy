@@ -10,7 +10,7 @@
                         </div>
                         <div class="current-user-list">
                             <ul class="green-text">
-                                <li id ="user">You: {{userName}}</li> <!-- Current user will be listed here -->
+                                <li id ="user">You: {{userName}} {{#if admin}}| Admin {{else}}| Student {{/if}} </li> <!-- Current user will be listed here -->
                             </ul>
                             <hr class="hr-line">
                             <div id="new-users"></div> <!-- Users will be appended here -->
@@ -26,9 +26,9 @@
                         </div>
                         <div class="messages">
                             <div class="one-message">
-                                <p>Example User: Hi, How are you ?</p>
-                                <span class="date"> 11:01 AM</span>
-                            </div>    
+                                <p>Hello! Welcome to the chat {{userName}}.</p>
+                                <br><br>
+                            </div>  
                         </div>
                         <div class="input-container">
                             <form>
