@@ -4,6 +4,7 @@ const router = require('express').Router();
 const Course = require("../../models/Course");
 const CourseJunction = require("../../models/CourseJunction");
 const withAuth = require('../../utils/auth');
+const { Op } = require("sequelize");
 
 router.post('/', async (req, res) => {
     try {
@@ -48,9 +49,20 @@ router.get('/:id', withAuth, async (req, res) => {
       const courseDataDB = await Course.findByPk(req.params.id);
   
       const course = courseDataDB.get({ plain: true });
+
+      // Determine if a student is signed up for a class
+      const signedUpCount = await CourseJunction.count({
+          where: {
+            [Op.and]: [
+                { student_id: req.session.userID },
+                { course_id: course.id }
+            ]
+        }
+      });
   
       res.render('view-course', { 
-        course, 
+        course,
+        signedUpCount: signedUpCount === 1,
         loggedIn: req.session.loggedIn,
         admin: req.session.admin,
         student: req.session.student });
