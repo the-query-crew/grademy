@@ -28,6 +28,13 @@
         <br>
         <button id="dropCourse" class="btn-small center-align ", type="submit" style="font-weight: bold; background-color: darkgreen; margin-top: 3%; margin-bottom: 5%;">Drop Course</button> 
         {{/if}}
+
+        {{#if admin}}
+        <a href="/dash/edit/{{course.id}}"> 
+        <button id="editCourse" class="btn-large center-align ", type="submit" style="font-weight: bold; background-color: darkgreen;">Edit Course</button>
+        </a>
+        {{/if}}
+
     </div>
 </div>
 <script src="/js/courseSignup.js"></script>
