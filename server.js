@@ -77,5 +77,5 @@ io.on('connection', (socket) => {
 
 // Syncs sequelize
 sequelize.sync({ force: false }).then(() => {
-  http.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening'));
 });
