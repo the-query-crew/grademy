@@ -26,7 +26,6 @@ async function editCourse (e) {
             }
         })
         if (response.ok) {
-            alert("Course updated!");
             document.location.replace('/dashboard-admin'); // Replace to dash once dash route is completed
         } else {
             alert("Not able to edit. Please try again.")
