@@ -50,8 +50,6 @@ router.get('/:id', withAuth, async (req, res) => {
   
       const course = courseDataDB.get({ plain: true });
 
-      console.log(course);
-
       // Determine if a student is signed up for a class
       const signedUpCount = await CourseJunction.count({
           where: {
@@ -61,8 +59,6 @@ router.get('/:id', withAuth, async (req, res) => {
             ]
         }
       });
-
-      console.log(signedUpCount);
   
       res.render('view-course', { 
         course,
