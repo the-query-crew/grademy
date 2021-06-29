@@ -78,6 +78,27 @@ router.put('/edit/:id', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
 });
+
+
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const dropCourse = await CourseJunction.destroy(
+      {
+        where: {
+          course_id: req.params.id,
+          student_id: req.session.userID
+        },
+      }
+    );
+    res.status(200).json(dropCourse);
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err);
+  }
+});
+  
+  
+  
   
 
 module.exports = router;

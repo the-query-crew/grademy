@@ -32,12 +32,16 @@
                 <li><a class="black-text" href="/">Log In</a></li>
                 {{/if}}
               </ul>
-              <a href="/" class="right app-title black-text">Grademy</a>
+              {{#if admin}}
+              <a href="/dashboard-admin" class="right app-title black-text">Grademy</a>
+              {{else}}
+              <a href="/dashboard-student" class="right app-title black-text">Grademy</a>
+              {{/if}}
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
             {{#if loggedIn}}
-            <li><a href="/chat">Chat</a></li>
+            <li><a class="firstnav" href="/chat">Chat</a></li>
             {{#if admin}}
             <li><a href="/dashboard-admin">Dashboard</a></li> <!-- Dashboard route for admin -->
             <li><a id="logOutAdmin2">Log Out</a></li>
@@ -46,7 +50,7 @@
             <li><a id="logOutStudent2">Log Out</a></li>
             {{/if}}
             {{else}}
-            <li><a href="/">Log In</a></li>
+            <li><a class="firstnav" href="/">Log In</a></li>
             {{/if}}
         </ul>
     </div>
