@@ -37,6 +37,7 @@ https://grademy.herokuapp.com/
   - MySQL2
   - Nodemon
   - Dotenv
+  - Materialize
 
 ### Contributors:
 
@@ -46,6 +47,17 @@ https://grademy.herokuapp.com/
 * Cheryth Dai https://github.com/ChengyuD
 
 ### Screenshot of deployed application:
+Log In          |  
+:-------------------------:|
+![Log in page](Assets/login-screenshot.png)   
+
+Admin Dashboard           |  Student Dashboard
+:-------------------------:|:-------------------------: 
+![Admin dashboard](Assets/admin-screenshot.png)  |  ![Student dashboard](Assets/student-screenshot.png)
+
+Chat         |  
+:-------------------------:|
+![Chat](Assets/chat-screenshot.png)   
 
 
 ### License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
