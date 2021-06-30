@@ -13,6 +13,7 @@ Admin Dashboard:
 
 Student Dashboard:
 - View courses they are currently enrolled in 
+- Enroll in courses
 - Drop courses 
 - Ask other students/admins for help on assignments through the chat
 
