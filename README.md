@@ -28,6 +28,7 @@ https://grademy.herokuapp.com/
 
   - JavaScript
   - Node.js
+  - Socket.io
   - Sequelize
   - Bcrypt
   - Connect-Session-Sequelize
