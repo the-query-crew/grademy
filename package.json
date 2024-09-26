@@ -1,6 +1,9 @@
 {
   "name": "grademy",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.15.1"
+  },
   "description": "Application for students and teachers to log in and  create and access courses",
   "main": "server.js",
   "scripts": {
